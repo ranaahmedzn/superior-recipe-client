@@ -5,7 +5,7 @@ const Header = () => {
     const user = {}
 
     return (
-        <nav className="bg-white border-gray-200">
+        <nav className="bg-white">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
                 <Link to='/' className="flex items-center">
                     <span className="self-center text-4xl font-bubblegum font-semibold whitespace-nowrap dark:text-white">Superior Recipe</span>
