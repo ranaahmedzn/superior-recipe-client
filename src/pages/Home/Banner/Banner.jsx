@@ -1,6 +1,6 @@
 import React from 'react';
 import './Banner.css'
-import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from 'swiper';
+import { A11y, Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -14,11 +14,11 @@ const Banner = () => {
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
-                autoplay={{
-                  delay: 3500,
-                  disableOnInteraction: false,
-                }}
-                modules={[Autoplay, Pagination, Navigation, A11y]}
+                // autoplay={{
+                //   delay: 3500,
+                //   disableOnInteraction: false,
+                // }}
+                modules={[Pagination, Navigation, A11y]}
             >
                 <SwiperSlide className='res-slide'>
                     <div className='max-w-screen-xl min-h-[calc(100vh-88px)] mx-auto flex items-center'>

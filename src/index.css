@@ -14,6 +14,12 @@
 .btn-nav-control{
     @apply text-white text-xl p-2 rounded-full hover:bg-[#2ec4b6] hover:text-black transition duration-200
 }
+.submit-btn{
+    @apply text-gray-900 bg-[#2ec4b6] font-medium rounded-full text-base px-5 py-3
+}
+.btn-continue{
+    @apply flex items-center w-full border border-gray-500 rounded-full p-2 font-medium
+}
 .default{
     @apply block mr-3 text-black
 }
