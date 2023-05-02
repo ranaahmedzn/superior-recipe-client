@@ -5,8 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'poppins' : 'Poppins',
+        'roboto': 'Roboto',
+        'bubblegum' : 'Bubblegum Sans',
+      },
+    },
   },
-  plugins: [],
+  plugins: []
 }
-

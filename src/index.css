@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.primary-btn{
+    @apply text-gray-900 bg-[#2ec4b6] hover:bg-[#109b8d] font-medium rounded-lg text-base px-5 py-3
+}
+.default{
+    @apply block mr-3 text-black
+}
+.active{
+    @apply text-[#2ec4b6] block mr-3 
+}
