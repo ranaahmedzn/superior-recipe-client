@@ -11,6 +11,9 @@
 .social-btn:hover{
     @apply bg-[#2ec4b6] text-gray-800
 }
+.btn-nav-control{
+    @apply text-white text-xl p-2 rounded-full hover:bg-[#2ec4b6] hover:text-black transition duration-200
+}
 .default{
     @apply block mr-3 text-black
 }
