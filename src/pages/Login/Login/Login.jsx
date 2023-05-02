@@ -1,12 +1,36 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import illustration from '../../../assets/assets/login.jpg'
 import google from '../../../assets/icons/google.png'
 import github from '../../../assets/icons/github.png'
 import { Link } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Login = () => {
     const [show, setShow] = useState(false)
+
+    const [email, setEmail] = useState('')
+
+    const {signInUser} = useContext(AuthContext)
+
+    const handleLogin = (event) => {
+        event.preventDefault()
+
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password)
+
+        signInUser(email, password)
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser)
+            form.reset()
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
 
     return (
         <div className='min-h-[calc(100vh-88px)] h-full login-container'>
@@ -15,12 +39,12 @@ const Login = () => {
                 <div className=''>
                     <div className=' px-10 py-10 rounded-xl bg-gray-200'>
                         <h2 className='font-bold text-3xl mb-5 font-bubblegum'>Login Account</h2>
-                        <form>
+                        <form onSubmit={handleLogin}>
                             <div className="mb-6">
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
                                 <input type="email" id="email" className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Enter email" required />
                             </div>
-                            <div className="mb-4">
+                            <div className="mb-4 relative">
                                 <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
                                 <input type={show ? "text" : "password"} id="password" className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder='Enter password' required />
                                 {

@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Header = () => {
-    const user = null;
+    const {user} = useContext(AuthContext);
 
     return (
-        <nav className="bg-white sticky top-0 z-50">
+        <nav className="bg-white"> {/* //sticky top-0 z-50 */}
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
                 <Link to='/' className="flex items-center">
                     <span className="self-center text-4xl font-bubblegum font-semibold whitespace-nowrap dark:text-white">Superior Recipe</span>
