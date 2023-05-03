@@ -74,7 +74,7 @@ const Register = () => {
                             </div>
                             <div className="mb-6">
                                 <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900">Photo URL</label>
-                                <input type="text" name='photo_url' id="photo_url" className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Enter photo url" required />
+                                <input type="text" name='photo_url' id="photo_url" className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Enter photo url" />
                             </div>
                             <div className="mb-6">
                                 <div className="flex items-center h-5">

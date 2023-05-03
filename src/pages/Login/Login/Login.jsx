@@ -12,7 +12,7 @@ const Login = () => {
 
     const [email, setEmail] = useState('')
 
-    const { signInUser, googleLogin, githubLogin } = useContext(AuthContext)
+    const { signInUser, googleLogin, githubLogin, resetPassword } = useContext(AuthContext)
 
     const handleLogin = (event) => {
         event.preventDefault()
@@ -59,6 +59,26 @@ const Login = () => {
             });
     }
 
+    const handleEmail = (e) => {
+        const emailValue = e.target.value;
+        setEmail(emailValue)
+    }
+    
+    const handleResetPassword = () => {
+        resetPassword(email)
+            .then(() => {
+                toast.info("Please check your inbox for resetting password", {
+                    position: toast.POSITION.TOP_CENTER
+                })
+            })
+            .catch(err => {
+                toast.error(err.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
+            })
+    }
+
+
     return (
         <div className='min-h-[calc(100vh-88px)] h-full login-container'>
             <div className='max-w-screen-xl py-12 mx-auto flex items-center justify-center gap-10'>
@@ -69,7 +89,7 @@ const Login = () => {
                         <form onSubmit={handleLogin}>
                             <div className="mb-6">
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                                <input type="email" id="email" className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Enter email" required />
+                                <input onChange={handleEmail} type="email" id="email" className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Enter email" required />
                             </div>
                             <div className="mb-4 relative">
                                 <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
@@ -85,7 +105,7 @@ const Login = () => {
                                     <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
                                 </div>
 
-                                <span className='ml-2 text-sm font-medium text-violet-500 hover:underline hover:cursor-pointer'>Forgot password?</span>
+                                <span onClick={handleResetPassword} className='ml-2 text-sm font-medium text-violet-500 hover:underline hover:cursor-pointer'>Forgot password?</span>
                             </div>
                             <button type="submit" className="submit-btn w-full rounded-full">Login</button>
                         </form>

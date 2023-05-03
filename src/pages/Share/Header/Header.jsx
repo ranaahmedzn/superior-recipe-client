@@ -72,7 +72,9 @@ const Header = () => {
                                 user ?
                                     <div className='flex gap-3 items-center ml-5'>
                                         <div className="group flex relative">
-                                            <img className='w-[45px] cursor-text rounded-full ring ring-[#2ec4b6]' src={user.photoURL} alt="" />
+                                            {
+                                              user.photoURL && <img className='w-[45px] cursor-text rounded-full ring ring-[#2ec4b6]' src={user.photoURL} alt="" />
+                                            }
                                             <div className="group-hover:block transition bg-gray-900 p-2.5 text-sm text-center text-gray-100 rounded-md absolute z-50 left-1/2 -translate-x-1/2 translate-y-[90%] hidden "><p>{user?.displayName}</p><p>{user?.email}</p></div>
                                         </div>
                                         <button onClick={handleLogout} className='primary-btn'>Logout</button>
