@@ -2,17 +2,20 @@ import React, { useContext, useState } from 'react';
 import illustration from '../../../assets/assets/login.jpg'
 import google from '../../../assets/icons/google.png'
 import github from '../../../assets/icons/github.png'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
 
 const Login = () => {
     const [show, setShow] = useState(false)
-
     const [email, setEmail] = useState('')
-
     const { signInUser, googleLogin, githubLogin, resetPassword } = useContext(AuthContext)
+
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    const from = location.state?.from?.pathname || '/';
 
     const handleLogin = (event) => {
         event.preventDefault()
@@ -27,6 +30,7 @@ const Login = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
                 form.reset()
+                navigate(from)
             })
             .catch(err => {
                 console.log(err)
@@ -41,9 +45,10 @@ const Login = () => {
                 toast.success('Successfully login with Google', {
                     position: toast.POSITION.TOP_CENTER
                 })
+                navigate(from)
             }).catch((err) => {
                 console.log(err)
-                toast.success('Successfully login with Github', {
+                toast.success(err.message, {
                     position: toast.POSITION.TOP_CENTER
                 })
             });
@@ -54,8 +59,15 @@ const Login = () => {
             .then((result) => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
+                toast.success('Successfully login with Github', {
+                    position: toast.POSITION.TOP_CENTER
+                })
+                navigate(from)
             }).catch((err) => {
                 console.log(err)
+                toast.success(err.message, {
+                    position: toast.POSITION.TOP_CENTER
+                })
             });
     }
 

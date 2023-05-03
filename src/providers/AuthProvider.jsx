@@ -11,11 +11,13 @@ const githubProvider = new GithubAuthProvider()
 
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null)
+    const [loader, setLoader] = useState(true)
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
             console.log(loggedUser)
             setUser(loggedUser)
+            setLoader(false)
         })
         // stop observing 
         return () => {
@@ -55,6 +57,7 @@ const AuthProvider = ({children}) => {
 
     const authInfo = {
         user,
+        loader,
         createUser,
         signInUser,
         signOutUser,
