@@ -3,12 +3,13 @@ import Header from '../pages/Share/Header/Header';
 import { Outlet } from 'react-router-dom';
 import Footer from '../pages/Share/Footer/Footer';
 import { AuthContext } from '../providers/AuthProvider';
+import LoaderPage from '../pages/LoaderPage/LoaderPage';
 
 const MainLayout = () => {
     const {loader} = useContext(AuthContext)
 
     if(loader){
-        return <h2 className='text-7xl font-bold'>Loading....</h2>
+        return <LoaderPage />
     }
 
     return (
