@@ -9,7 +9,7 @@ const Register = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const {createUser} = useContext(AuthContext) 
+    const {createUser, updateUserProfile} = useContext(AuthContext) 
 
     const handleRegister = (event) => {
         event.preventDefault()
@@ -24,6 +24,7 @@ const Register = () => {
             const createdUser = result.user;
             console.log(createdUser)
             form.reset()
+            handleUpdateProfile(name, photoUrl)
         })
         .catch(err => {
             console.log(err)
@@ -38,6 +39,13 @@ const Register = () => {
     const handlePassword = (e) => {
         const passwordValue = e.target.value;
         setPassword(passwordValue)
+    }
+
+    // update user profile name and photo 
+    const handleUpdateProfile = (name, photoUrl) => {
+        updateUserProfile(name, photoUrl)
+        .then(() => {})
+        .catch(err => console.log(err))
     }
 
     return (

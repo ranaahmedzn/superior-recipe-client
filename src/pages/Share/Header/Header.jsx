@@ -1,9 +1,18 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Header = () => {
-    const {user} = useContext(AuthContext);
+    const { user, signOutUser } = useContext(AuthContext);
+
+    const handleLogout = () => {
+        signOutUser()
+        .then(() => toast.success('Logout successful!', {
+            position: toast.POSITION.TOP_CENTER
+        }))
+        .catch(err => console.log(err))
+    }
 
     return (
         <nav className="bg-white"> {/* //sticky top-0 z-50 */}
@@ -60,10 +69,14 @@ const Header = () => {
                         </li>
                         <li>
                             {
-                                user ? <div className='flex gap-3 items-center ml-5'>
-                                    <img className='w-[45px] cursor-text rounded-full ring ring-blue-500' src="https://i.ibb.co/py09c0j/kashem.jpg" alt="" />
-                                    <button className='primary-btn'>Logout</button>
-                                </div>
+                                user ?
+                                    <div className='flex gap-3 items-center ml-5'>
+                                        <div className="group flex relative">
+                                            <img className='w-[45px] cursor-text rounded-full ring ring-[#2ec4b6]' src={user.photoURL} alt="" />
+                                            <div className="group-hover:block transition bg-gray-900 p-2.5 text-sm text-center text-gray-100 rounded-md absolute z-50 left-1/2 -translate-x-1/2 translate-y-[90%] hidden "><p>{user?.displayName}</p><p>{user?.email}</p></div>
+                                        </div>
+                                        <button onClick={handleLogout} className='primary-btn'>Logout</button>
+                                    </div>
                                     : <Link to='/login'><button className='primary-btn ml-5'>Login</button></Link>
                             }
                         </li>
