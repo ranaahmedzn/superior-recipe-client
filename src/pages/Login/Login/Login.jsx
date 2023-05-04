@@ -47,7 +47,7 @@ const Login = () => {
             .then((result) => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
-                toast.success('Successfully login with Google!👍', {
+                toast.success('Successfully login with Google👍', {
                     position: toast.POSITION.TOP_CENTER
                 })
                 navigate(from)
@@ -64,7 +64,7 @@ const Login = () => {
             .then((result) => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
-                toast.success('Successfully login with Github!👍', {
+                toast.success('Successfully login with Github👍', {
                     position: toast.POSITION.TOP_CENTER
                 })
                 navigate(from)

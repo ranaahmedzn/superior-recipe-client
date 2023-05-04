@@ -6,7 +6,8 @@ import Home from "../pages/Home/Home/Home";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import ChefRecipes from "../pages/ChefRecipes/ChefRecipes/ChefRecipes";
 import PrivateRoute from "./PrivateRoute";
-import Blog from "../pages/Blog/Blog";
+import Terms from "../pages/Terms/Terms";
+import BlogPage from "../pages/Blog/BlogPage";
 
 const router = createBrowserRouter([
     {
@@ -34,13 +35,17 @@ const router = createBrowserRouter([
             },
             {
                 path: '/blog',
-                element: <Blog />
-            },
+                element: <BlogPage />
+            }
             // {
             //     path: '*',
             //     element: <ErrorPage />
             // }
         ]
+    },
+    {
+        path: '/terms',
+        element: <Terms />
     }
 ])
 
