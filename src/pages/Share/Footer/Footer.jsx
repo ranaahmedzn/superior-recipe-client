@@ -17,9 +17,9 @@ const Footer = () => {
 
     return (
         <div>
-            <div className='w-full bg-gray-900'>
-                <div className='max-w-screen-xl mx-auto py-16 grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-5'>
-                    <div className='lg:col-span-2 space-y-5 mr-10'>
+            <div className='w-full bg-gray-900 px-4'>
+                <div className='max-w-screen-xl mx-auto py-10 lg:py-16 grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-5'>
+                    <div className='lg:col-span-2 space-y-5 lg:mr-10'>
                         <Link className='font-bold text-3xl text-white' to="/">Subscribe</Link>
                         <p className='text-base text-gray-300'>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
 
@@ -67,7 +67,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                <div className='max-w-screen-xl mx-auto py-6 flex justify-between items-center text-gray-400'>
+                <div className='max-w-screen-xl mx-auto py-6 flex gap-4 flex-col-reverse md:flex-row justify-between md:items-center text-gray-400'>
                     <p>&copy;2023 Superior Recipe | All Rights Reserved</p>
                     <div className='flex gap-3'>
                         <span className='social-btn'><FaFacebookSquare /></span>

@@ -11,16 +11,16 @@ import logo8 from '../../../assets/logos/logo8.png'
 
 const Sponsors = () => {
     return (
-        <div className='max-w-screen-xl mx-auto my-20 py-10 px-10'>
+        <div className='max-w-screen-xl mx-auto my-20 py-10 px-3 lg:px-10'>
             <div className='text-center space-y-4'>
                 <h3 className='text-5xl font-bold font-bubblegum'>Our Sponsors</h3>
-                <p className='w-1/2 mx-auto text-gray-400'>
+                <p className='lg:w-1/2 mx-auto text-gray-400'>
                     Experience the Authentic Taste of Italy with Our Italian Cuisine Company.
                     Indulge in Traditional Recipes and Innovative Twists on Classic Dishes.
                 </p>
             </div>
 
-            <div className='py-3 bg-orange-100 mt-10'>
+            <div className='py-3 rounded bg-orange-100 mt-10'>
                 <Marquee
                     speed={100}
                     pauseOnHover={true}
