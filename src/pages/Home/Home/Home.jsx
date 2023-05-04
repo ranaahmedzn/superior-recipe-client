@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import { useLoaderData } from 'react-router-dom';
 import ChefCard from '../ChefCard/ChefCard';
 import Categories from '../Categories/Categories';
+import Sponsors from '../Sponsors/Sponsors';
 
 const Home = () => {
     const chefs = useLoaderData()
@@ -26,6 +27,7 @@ const Home = () => {
                 </div>
             </section>
             <Categories></Categories>
+            <Sponsors></Sponsors>
         </div>
     );
 };
