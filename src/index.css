@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 .primary-btn{
-    @apply text-gray-900 bg-[#2ec4b6] font-medium rounded-lg text-base px-5 py-3
+    @apply text-black bg-gradient-to-r from-[#FFC444] to-[#FAAA49] font-medium rounded-lg text-base px-5 py-3
 }
 .social-btn{
     @apply text-base border border-gray-500 rounded-full p-2 cursor-pointer transition
 }
 .social-btn:hover{
-    @apply bg-[#2ec4b6] text-gray-800
+    @apply bg-gradient-to-r from-[#FFC444] to-[#FAAA49] text-gray-800
 }
 .btn-nav-control{
-    @apply text-white text-xl p-2 rounded-full hover:bg-[#2ec4b6] hover:text-black transition duration-200
+    @apply text-white text-xl p-2 rounded-full hover:bg-gradient-to-r from-[#FFC444] to-[#FAAA49] hover:text-black transition-all duration-300
 }
 .submit-btn{
-    @apply text-gray-900 bg-[#2ec4b6] font-medium rounded-full text-base px-5 py-3
+    @apply text-gray-900 bg-gradient-to-r from-[#FFC444] to-[#FAAA49] font-medium rounded-full text-base px-5 py-3
 }
 .btn-continue{
-    @apply flex items-center w-full border border-gray-500 hover:bg-gray-200 rounded-full p-2 font-medium
+    @apply flex items-center w-full border border-gray-500 hover:bg-gradient-to-r from-[#ff8e882a] to-[#de8adf3a] rounded-full p-2 font-medium
 }
 .default{
     @apply block mr-3 text-black
 }
 .active{
-    @apply text-[#2ec4b6] block mr-3 
+    @apply text-[#ffa93f] block mr-3 
 }

@@ -17,7 +17,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />,
-                loader: () => fetch('https://superior-recipe-server-ranasheikhzn.vercel.app/chefs')
+                loader: () => fetch('http://localhost:5000/chefs')
             },
             {
                 path: '/login',
@@ -30,12 +30,16 @@ const router = createBrowserRouter([
             {
                 path: '/chef-recipes/chef/:id',
                 element: <PrivateRoute><ChefRecipes /></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://superior-recipe-server-ranasheikhzn.vercel.app/chef-recipes/chef/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/chef-recipes/chef/${params.id}`)
             },
             {
                 path: '/blog',
                 element: <Blog />
-            }
+            },
+            // {
+            //     path: '*',
+            //     element: <ErrorPage />
+            // }
         ]
     }
 ])

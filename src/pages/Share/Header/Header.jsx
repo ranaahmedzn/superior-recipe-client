@@ -10,14 +10,18 @@ const Header = () => {
 
     const handleLogout = () => {
         signOutUser()
-            .then(() => toast.success('Logout successful!', {
-                position: toast.POSITION.TOP_CENTER
-            }))
+            .then(() => {
+                toast.success('Logout Successful!👍', {
+                    position: toast.POSITION.TOP_CENTER
+                })
+            })
             .catch(err => console.log(err))
     }
 
     return (
         <nav className="bg-white"> {/* //sticky top-0 z-50 */}
+
+            {/* for larger device */}
             <div className="hidden max-w-screen-xl md:flex items-center justify-between mx-auto p-5">
                 <Link to='/' className="flex items-center">
                     <span className="self-center text-4xl font-bubblegum font-semibold whitespace-nowrap dark:text-white">Superior Recipe</span>
@@ -75,7 +79,7 @@ const Header = () => {
                                     <div className='flex gap-3 items-center ml-5'>
                                         <div className="group flex relative">
                                             {
-                                                user?.photoURL && <img className='w-[45px] cursor-text rounded-full ring ring-[#2ec4b6]' src={user.photoURL} alt="" />
+                                                user?.photoURL && <img className='w-[45px] cursor-text rounded-full ring-2 ring-[#FAAA49]' src={user.photoURL} alt="" />
                                             }
                                             <div className="group-hover:block transition bg-gray-900 p-2.5 text-sm text-center text-gray-100 rounded-md absolute z-50 left-1/2 -translate-x-1/2 translate-y-[90%] hidden "><p>{user?.displayName}</p><p>{user?.email}</p></div>
                                         </div>
@@ -88,7 +92,7 @@ const Header = () => {
                 </div>
             </div>
 
-            {/* for small device  */}
+            {/* for smaller device  */}
             <div className='lg:hidden relative h-[75px] p-4 flex justify-between items-center'>
                 <Link to='/' className="flex items-center">
                     <span className="self-center text-4xl font-bubblegum font-semibold whitespace-nowrap dark:text-white">Superior Recipe</span>
@@ -153,10 +157,10 @@ const Header = () => {
                     <li>
                         {
                             user ?
-                                <div className='flex gap-3 items-center ml-5'>
+                                <div className='flex gap-3 items-center'>
                                     <div className="group flex relative">
                                         {
-                                            user?.photoURL && <img className='w-[45px] cursor-text rounded-full ring ring-[#2ec4b6]' src={user.photoURL} alt="" />
+                                            user?.photoURL && <img className='w-[45px] cursor-text rounded-full ring ring-[#FAAA49]' src={user.photoURL} alt="" />
                                         }
                                         <div className="group-hover:block transition bg-gray-900 p-2.5 text-sm text-center text-gray-100 rounded-md absolute z-50 left-1/2 -translate-x-1/2 translate-y-[90%] hidden "><p>{user?.displayName}</p><p>{user?.email}</p></div>
                                     </div>

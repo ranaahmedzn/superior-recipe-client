@@ -20,7 +20,7 @@ const Sponsors = () => {
                 </p>
             </div>
 
-            <div className='py-3 rounded bg-orange-100 mt-10'>
+            <div className='py-3 rounded bg-gradient-to-r from-[#ff8e882a] to-[#de8adf3a] mt-10'>
                 <Marquee
                     speed={100}
                     pauseOnHover={true}

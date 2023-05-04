@@ -17,7 +17,7 @@ const Footer = () => {
 
     return (
         <div>
-            <div className='w-full bg-gray-900 px-4'>
+            <div className='w-full bg-gray-800 px-4'>
                 <div className='max-w-screen-xl mx-auto py-10 lg:py-16 grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-5'>
                     <div className='lg:col-span-2 space-y-5 lg:mr-10'>
                         <Link className='font-bold text-3xl text-white' to="/">Subscribe</Link>
@@ -27,9 +27,9 @@ const Footer = () => {
                             <label htmlFor="subscribe" className="sr-only">Search</label>
                             <div className="relative w-full">
                                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                    <FaEnvelope className='text-gray-200' />
+                                    <FaEnvelope className='text-gray-50' />
                                 </div>
-                                <input type="text" id="subscribe" className="w-full text-gray-300 bg-[#175c55] text-base px-5 py-2.5 pl-10 border border-gray-400 rounded-lg focus:outline-none focus:ring focus:border-0 placeholder-gray-300" placeholder="Your email" required />
+                                <input type="text" id="subscribe" className="w-full text-gray-50 text-medium bg-gray-700 text-base px-5 py-2.5 pl-10 border border-gray-400 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#ffa93f] focus:border-0 placeholder-gray-50" placeholder="Your email" required />
                             </div>
                             <button className="primary-btn">
                                 Subscribe
@@ -54,7 +54,7 @@ const Footer = () => {
                         <h3 className='font-bold text-2xl text-white'>Contact</h3>
                         <p className='flex gap-2 items-center'>
                             <FaMapMarkerAlt />
-                            <span>Mirpur 1210, Dhaka, Bangladesh</span>
+                            <span>Viale Pergolesi, 10, 20124 Milan, Italy</span>
                         </p>
                         <p className='flex gap-2 items-center'>
                             <FaEnvelope />
@@ -62,7 +62,7 @@ const Footer = () => {
                         </p>
                         <p className='flex gap-2 items-center'>
                             <FaPhone />
-                            <span>+1777 - 978 - 5570</span>
+                            <span>+39 02 1234567</span>
                         </p>
                     </div>
                 </div>

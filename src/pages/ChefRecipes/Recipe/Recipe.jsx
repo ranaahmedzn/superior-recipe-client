@@ -18,9 +18,9 @@ const Recipe = ({ recipe }) => {
     }
 
     return (
-        <div className='w-full p-6 flex flex-col justify-between bg-white border border-gray-200 rounded-lg shadow'>
+        <div className='w-full p-6 flex flex-col justify-between bg-white border-1 border-gray-200 rounded-lg drop-shadow-xl'>
             <div>
-                <h2 className='text-2xl font-bold mb-5 w-fit p-5 mx-auto rounded-lg border-2 border-[#2ec4b6] bg-teal-50 text-[#2ec4b6]'>{recipe_name}</h2>
+                <h2 className='text-2xl font-bold mb-5 w-full text-center p-5 mx-auto rounded-lg border-2 border-[#FB5FA6] bg-gradient-to-r from-[#ff8e882a] to-[#de8adf3a] text-[#FB5FA6]'>{recipe_name}</h2>
                 <div className='flex justify-between gap-3'>
                     <div className='w-1/2'>
                         <h4 className='text-lg font-bold'>Ingredients:</h4>
@@ -38,11 +38,11 @@ const Recipe = ({ recipe }) => {
                             {
                                 fold ? <>
                                     {cooking_method}...
-                                    <span onClick={() => setFold(!fold)} className='font-bold text-medium text-rose-500 cursor-pointer'>See Less</span>
+                                    <span onClick={() => setFold(!fold)} className='font-bold text-medium text-[#FB5FA6] cursor-pointer'>See Less</span>
                                 </>
                                 : <>
                                     {cooking_method.slice(0, 90)}...
-                                    <span onClick={() => setFold(!fold)} className='font-bold text-medium text-rose-500 cursor-pointer'>See More</span>
+                                    <span onClick={() => setFold(!fold)} className='font-bold text-medium text-[#FB5FA6] cursor-pointer'>See More</span>
                                 </>
                             }
                         </p>

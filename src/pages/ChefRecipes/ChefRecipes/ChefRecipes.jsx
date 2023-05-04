@@ -10,12 +10,12 @@ const ChefRecipes = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        fetch(`https://superior-recipe-server-ranasheikhzn.vercel.app/chefs/${id}`)
+        fetch(`http://localhost:5000/chefs/${id}`)
             .then(res => res.json())
             .then(data => setChef(data))
     }, [id])
 
-    const { chef_name, chef_picture, experience, description, likes, number_of_recipes } = chef;
+    const { chef_name, chef_fullPicture, experience, description, likes, number_of_recipes } = chef;
 
     return (
         <div className='min-h-[calc(100vh-88px)]'>
@@ -26,10 +26,10 @@ const ChefRecipes = () => {
             <div className='flex justify-between items-center gap-16 max-w-screen-xl mx-auto px-5 py-20 my-10'>
                 <div className='w-1/2 relative'>
                     <div className='rounded-lg relative overflow-hidden'>
-                        <img className='hover:scale-125 hover:cursor-text hover:-translate-x-10 duration-500 ease-in-out transition-all w-full rounded-lg' src={chef_picture} alt="" />
+                        <img className='hover:scale-125 hover:cursor-text hover:translate-y-10 duration-500 ease-in-out transition-all w-full rounded-lg' src={chef_fullPicture} alt="" />
 
                     </div>
-                    <span className='text-gray-900 bg-[#2ec4b6] font-bold rounded-lg text-lg absolute -right-5 -bottom-5 py-5 px-5 shadow-xl'>{experience}+ Years of Experience</span>
+                    <span className='text-gray-900 bg-gradient-to-r from-[#FFC444] to-[#FAAA49] font-bold rounded-lg text-lg absolute -right-5 -bottom-5 py-5 px-5 shadow-xl'>{experience}+ Years of Experience</span>
                 </div>
                 <div className='w-1/2'>
                     <div className='space-y-3 mb-3'>

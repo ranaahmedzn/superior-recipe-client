@@ -10,7 +10,7 @@ const ErrorPage = () => {
         <div  className='h-screen flex justify-center items-center'>
             <div className='flex gap-5 flex-col items-center'>
                 <img className='w-[400px] -mt-10' src={errorImg} alt="" />
-                <h2 className='font-bold text-4xl font-bubblegum'>{error.error.message}</h2>
+                <h2 className='font-bold text-4xl font-bubblegum'>{error?.error?.message}</h2>
                 <Link to='/'>
                     <button className='submit-btn flex gap-2 items-center'>
                         <FaHome />

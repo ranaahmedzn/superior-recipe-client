@@ -1,7 +1,7 @@
 .chef-recipe-banner{
     width: 100%;
     height: 280px;
-    background-image: linear-gradient(360deg,rgba(0, 0, 0, 0.61) 0%, rgba(0, 0, 0, 0.651) 100%), url("../../../assets/assets/food3.jpg");
+    background-image: linear-gradient(360deg,rgba(0, 0, 0, 0.555) 0%, rgba(0, 0, 0, 0.712) 100%), url("../../../assets/assets/food4.jpg");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
