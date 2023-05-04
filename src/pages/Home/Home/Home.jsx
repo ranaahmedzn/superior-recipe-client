@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../Banner/Banner';
 import { useLoaderData } from 'react-router-dom';
 import ChefCard from '../ChefCard/ChefCard';
+import Categories from '../Categories/Categories';
 
 const Home = () => {
     const chefs = useLoaderData()
@@ -24,6 +25,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <Categories></Categories>
         </div>
     );
 };
