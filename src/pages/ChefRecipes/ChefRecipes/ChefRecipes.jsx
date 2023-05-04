@@ -10,7 +10,7 @@ const ChefRecipes = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        fetch(`http://localhost:5000/chefs/${id}`)
+        fetch(`https://superior-recipe-server-ranasheikhzn.vercel.app/chefs/${id}`)
             .then(res => res.json())
             .then(data => setChef(data))
     }, [id])
@@ -60,8 +60,8 @@ const ChefRecipes = () => {
                 <div className='grid gap-7 py-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                     {
                         recipes.map((recipe, idx) => <Recipe
-                        key={idx}
-                        recipe={recipe}
+                            key={idx}
+                            recipe={recipe}
                         ></Recipe>)
                     }
                 </div>

@@ -3,13 +3,14 @@ import illustration from '../../../assets/assets/login.jpg'
 import google from '../../../assets/icons/google.png'
 import github from '../../../assets/icons/github.png'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaExclamationCircle, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
 
 const Login = () => {
     const [show, setShow] = useState(false)
     const [email, setEmail] = useState('')
+    const [error, setError] = useState('')
     const { signInUser, googleLogin, githubLogin, resetPassword } = useContext(AuthContext)
 
     const navigate = useNavigate()
@@ -34,6 +35,7 @@ const Login = () => {
             })
             .catch(err => {
                 console.log(err)
+                setError(err.message)
             })
     }
 
@@ -111,6 +113,9 @@ const Login = () => {
                                         : <FaEye onClick={() => setShow(!show)} className='absolute top-10 right-3 cursor-pointer' />
                                 }
                             </div>
+                            {
+                                error && <p className='-mt-2 mb-6 flex gap-1 items-center text-sm font-medium text-rose-500'><FaExclamationCircle /> {error}</p>
+                            }
                             <div className="flex justify-between items-start mb-6">
                                 <div className="flex items-center h-5">
                                     <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-100 focus:ring-3 focus:ring-blue-300" required />

@@ -1,13 +1,14 @@
 import React, { useContext, useState } from 'react';
 import illustration from '../../../assets/assets/login.jpg'
 import { Link } from 'react-router-dom';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaExclamationCircle, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const Register = () => {
     const [show, setShow] = useState(false)
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [passwordErr, setPasswordErr] = useState('')
 
     const {createUser, updateUserProfile} = useContext(AuthContext) 
 
@@ -39,6 +40,15 @@ const Register = () => {
     const handlePassword = (e) => {
         const passwordValue = e.target.value;
         setPassword(passwordValue)
+
+        // handling password error 
+        if(passwordValue.length < 6){
+            setPasswordErr('Password must be 6 character or longer')
+        }
+        else{
+            setPasswordErr('')
+        }
+
     }
 
     // update user profile name and photo 
@@ -72,6 +82,11 @@ const Register = () => {
                                     : <FaEye onClick={() => setShow(!show)} className='absolute top-10 right-3 cursor-pointer' />
                                 }
                             </div>
+
+                            {
+                                passwordErr && <p className='-mt-4 mb-6 flex gap-1 items-center text-sm font-medium text-rose-500'><FaExclamationCircle /> {passwordErr}</p>
+                            }
+
                             <div className="mb-6">
                                 <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900">Photo URL</label>
                                 <input type="text" name='photo_url' id="photo_url" className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Enter photo url" />
