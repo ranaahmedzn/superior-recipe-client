@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
 import { HiBars3BottomRight, HiXMark } from "react-icons/hi2";
+import { FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
 
 const Header = () => {
     const [open, setOpen] = useState(false)
@@ -83,9 +84,15 @@ const Header = () => {
                                             }
                                             <div className="group-hover:block transition bg-gray-900 p-2.5 text-sm text-center text-gray-100 rounded-md absolute z-50 left-1/2 -translate-x-1/2 translate-y-[90%] hidden "><p>{user?.displayName}</p><p>{user?.email}</p></div>
                                         </div>
-                                        <button onClick={handleLogout} className='primary-btn'>Logout</button>
+                                        <button onClick={handleLogout} className='primary-btn flex gap-1 items-center'>
+                                            <FaSignOutAlt />
+                                            <span>Logout</span>
+                                        </button>
                                     </div>
-                                    : <Link to='/login'><button className='primary-btn ml-5'>Login</button></Link>
+                                    : <Link to='/login'><button className='primary-btn ml-5 flex gap-1 items-center'>
+                                        <FaSignInAlt />
+                                        <span>Login</span>
+                                    </button></Link>
                             }
                         </li>
                     </ul>
@@ -164,9 +171,15 @@ const Header = () => {
                                         }
                                         <div className="group-hover:block transition bg-gray-900 p-2.5 text-sm text-center text-gray-100 rounded-md absolute z-50 left-1/2 -translate-x-1/2 translate-y-[90%] hidden "><p>{user?.displayName}</p><p>{user?.email}</p></div>
                                     </div>
-                                    <button onClick={handleLogout} className='primary-btn'>Logout</button>
+                                    <button onClick={handleLogout} className='primary-btn flex gap-1 items-center'>
+                                        <FaSignOutAlt />
+                                        <span>Logout</span>
+                                    </button>
                                 </div>
-                                : <Link to='/login'><button className='primary-btn'>Login</button></Link>
+                                : <Link to='/login'><button className='primary-btn flex gap-2 items-center'>
+                                    <FaSignInAlt />
+                                    <span>Back to Home</span>
+                                </button></Link>
                         }
                     </li>
                 </ul>

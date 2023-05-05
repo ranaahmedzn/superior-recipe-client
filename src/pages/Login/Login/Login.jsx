@@ -76,6 +76,7 @@ const Login = () => {
             });
     }
 
+    // set email in state 
     const handleEmail = (e) => {
         const emailValue = e.target.value;
         setEmail(emailValue)

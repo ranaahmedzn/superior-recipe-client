@@ -35,14 +35,19 @@ const Register = () => {
         })
         .catch(err => {
             console.log(err)
+            toast.success(err.message, {
+                position: toast.POSITION.TOP_CENTER
+            })
         })
     }
 
+    // set email in state 
     const handleEmail = (e) => {
         const emailValue = e.target.value;
         setEmail(emailValue)
     }
 
+    // set password in state
     const handlePassword = (e) => {
         const passwordValue = e.target.value;
         setPassword(passwordValue)
@@ -51,7 +56,12 @@ const Register = () => {
         if(passwordValue.length < 6){
             setPasswordErr('Password must be 6 character or longer.')
         }
-
+        else if(!/(?=.*[0-9])/.test(passwordValue)){
+            setPasswordErr('Password should contain at least one digit.')
+        }
+        else if(!/(?=.*[!@#$%^&*])/.test(passwordValue)){
+            setPasswordErr('Please include at least one special character')
+        }
         else{
             setPasswordErr('')
         }
