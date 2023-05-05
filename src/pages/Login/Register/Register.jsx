@@ -77,9 +77,9 @@ const Register = () => {
 
     return (
         <div className='min-h-[calc(100vh-88px)] h-full login-container'>
-            <div className='max-w-screen-xl py-16 mx-auto flex flex-row-reverse items-center justify-center gap-10'>
-                <img className='h-[650px] -mr-24' src={illustration} alt="" />
-                <div className='w-5/12'>
+            <div className='max-w-screen-xl px-4 py-16 mx-auto flex flex-col-reverse md:flex-row-reverse items-center justify-center gap-10'>
+                <img className='h-96 md:h-[650px] md:-mr-24' src={illustration} alt="" />
+                <div className='w-full md:w-5/12'>
                     <div className='w-full px-10 py-10 rounded-xl bg-gradient-to-r from-[#ff8e882a] to-[#de8adf3a]'>
                         <h2 className='font-bold text-3xl mb-5 font-bubblegum'>Register Account</h2>
                         <form onSubmit={handleRegister}>

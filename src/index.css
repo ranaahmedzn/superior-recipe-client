@@ -23,6 +23,9 @@
 .default{
     @apply block mr-3 text-black
 }
+.default2{
+    @apply block mr-3 text-gray-200
+}
 .active{
     @apply text-[#ffa93f] block mr-3 
 }

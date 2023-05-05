@@ -14,11 +14,11 @@ const Banner = () => {
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
-                // autoplay={{
-                //   delay: 3500,
-                //   disableOnInteraction: false,
-                // }}
-                modules={[Pagination, Navigation, A11y]}
+                autoplay={{
+                  delay: 4000,
+                  disableOnInteraction: false,
+                }}
+                modules={[Autoplay, Pagination, Navigation, A11y]}
             >
                 <SwiperSlide className='res-slide'>
                     <div className='max-w-screen-xl min-h-[calc(100vh-75px)] md:min-h-[calc(100vh-88px)] p-4 md:p-5 mx-auto flex  items-center'>

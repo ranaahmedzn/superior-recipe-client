@@ -21,7 +21,7 @@ const Footer = () => {
                 <div className='max-w-screen-xl mx-auto py-10 lg:py-16 grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-5'>
                     <div className='lg:col-span-2 space-y-5 lg:mr-10'>
                         <Link className='font-bold text-3xl text-white' to="/">Subscribe</Link>
-                        <p className='text-base text-gray-300'>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
+                        <p className='text-base text-gray-300'>Subscribe to our delicious newsletter and stay up-to-date with the latest Italian food recipes, cooking tips, and culinary news!</p>
 
                         <form onSubmit={handleSubscribe} className="flex items-center gap-2">
                             <label htmlFor="subscribe" className="sr-only">Search</label>
@@ -29,7 +29,7 @@ const Footer = () => {
                                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                                     <FaEnvelope className='text-gray-50' />
                                 </div>
-                                <input type="text" id="subscribe" className="w-full text-gray-50 text-medium bg-gray-700 text-base px-5 py-2.5 pl-10 border border-gray-400 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#ffa93f] focus:border-0 placeholder-gray-50" placeholder="Your email" required />
+                                <input type="email" name='email' id="subscribe" className="w-full text-gray-50 text-medium bg-gray-700 text-base px-5 py-2.5 pl-10 border border-gray-400 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#ffa93f] focus:border-0 placeholder-gray-50" placeholder="Your email" required />
                             </div>
                             <button className="primary-btn">
                                 Subscribe

@@ -8,6 +8,8 @@ import ChefRecipes from "../pages/ChefRecipes/ChefRecipes/ChefRecipes";
 import PrivateRoute from "./PrivateRoute";
 import Terms from "../pages/Terms/Terms";
 import BlogPage from "../pages/Blog/BlogPage";
+import About from "../pages/About/About";
+import Contact from "../pages/Contact/Contact";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <BlogPage />
+            },
+            {
+                path: '/about',
+                element: <About />
+            },
+            {
+                path: '/contact',
+                element: <Contact />
             }
             // {
             //     path: '*',

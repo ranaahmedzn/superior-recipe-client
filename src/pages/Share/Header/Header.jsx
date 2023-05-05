@@ -23,7 +23,7 @@ const Header = () => {
         <nav className="bg-white"> {/* //sticky top-0 z-50 */}
 
             {/* for larger device */}
-            <div className="hidden max-w-screen-xl md:flex items-center justify-between mx-auto p-5">
+            <div className="hidden max-w-screen-xl lg:flex items-center justify-between mx-auto p-5">
                 <Link to='/' className="flex items-center">
                     <span className="self-center text-4xl font-bubblegum font-semibold whitespace-nowrap dark:text-white">Superior Recipe</span>
                 </Link>
@@ -80,7 +80,7 @@ const Header = () => {
                                     <div className='flex gap-3 items-center ml-5'>
                                         <div className="group flex relative">
                                             {
-                                                user?.photoURL && <img className='w-[45px] cursor-text rounded-full ring-2 ring-[#FAAA49]' src={user?.photoURL} alt="" />
+                                                user?.photoURL && <img className='w-[45px] cursor-pointer rounded-full ring-2 ring-[#FAAA49]' src={user?.photoURL} alt="" />
                                             }
                                             <div className="group-hover:block transition bg-gray-900 p-2.5 text-sm text-center text-gray-100 rounded-md absolute z-50 left-1/2 -translate-x-1/2 translate-y-[90%] hidden "><p>{user?.displayName}</p><p>{user?.email}</p></div>
                                         </div>
@@ -112,14 +112,14 @@ const Header = () => {
                     }
                 </div>
 
-                <ul className={`flex flex-col z-50 absolute gap-8 py-8 px-6 ${open ? 'top-[75px] left-0' : "top-[75px] -left-[1000px]"} duration-500 bg-gray-700 w-full`}>
+                <ul className={`flex flex-col z-50 absolute gap-8 py-8 px-6 ${open ? 'top-[75px] left-0' : "top-[75px] -left-[1000px]"} duration-500 bg-gray-800 w-full`}>
                     <li>
                         <NavLink
                             to='/'
                             className={({ isActive }) =>
                                 isActive
                                     ? "active"
-                                    : "default"
+                                    : "default2"
                             }
                         >
                             Home
@@ -131,7 +131,7 @@ const Header = () => {
                             className={({ isActive }) =>
                                 isActive
                                     ? "active"
-                                    : "default"
+                                    : "default2"
                             }
                         >
                             Blog
@@ -143,7 +143,7 @@ const Header = () => {
                             className={({ isActive }) =>
                                 isActive
                                     ? "active"
-                                    : "default"
+                                    : "default2"
                             }
                         >
                             About
@@ -155,7 +155,7 @@ const Header = () => {
                             className={({ isActive }) =>
                                 isActive
                                     ? "active"
-                                    : "default"
+                                    : "default2"
                             }
                         >
                             Contact
@@ -167,7 +167,7 @@ const Header = () => {
                                 <div className='flex gap-3 items-center'>
                                     <div className="group flex relative">
                                         {
-                                            user?.photoURL && <img className='w-[45px] cursor-text rounded-full ring ring-[#FAAA49]' src={user?.photoURL} alt="" />
+                                            user?.photoURL && <img className='w-[45px] cursor-pointer rounded-full ring ring-[#FAAA49]' src={user?.photoURL} alt="" />
                                         }
                                         <div className="group-hover:block transition bg-gray-900 p-2.5 text-sm text-center text-gray-100 rounded-md absolute z-50 left-1/2 -translate-x-1/2 translate-y-[90%] hidden "><p>{user?.displayName}</p><p>{user?.email}</p></div>
                                     </div>
@@ -178,7 +178,7 @@ const Header = () => {
                                 </div>
                                 : <Link to='/login'><button className='primary-btn flex gap-2 items-center'>
                                     <FaSignInAlt />
-                                    <span>Back to Home</span>
+                                    <span>Login</span>
                                 </button></Link>
                         }
                     </li>

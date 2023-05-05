@@ -107,10 +107,10 @@ const Login = () => {
 
     return (
         <div className='min-h-[calc(100vh-88px)] h-full login-container'>
-            <div className='max-w-screen-xl py-12 mx-auto flex items-center justify-center gap-10'>
-                <img className='h-[650px] -ml-24' src={illustration} alt="" />
-                <div className=''>
-                    <div className=' px-10 py-10 rounded-xl bg-gradient-to-r from-[#ff8e882a] to-[#de8adf3a]'>
+            <div className='max-w-screen-xl px-4 py-12 mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-10'>
+                <img className='h-96 md:h-[650px] md:-ml-24' src={illustration} alt="" />
+                <div className='w-full md:w-[460px]'>
+                    <div className='px-10 py-10 rounded-xl bg-gradient-to-r from-[#ff8e882a] to-[#de8adf3a]'>
                         <h2 className='font-bold text-3xl mb-5 font-bubblegum'>Login Account</h2>
                         <form onSubmit={handleLogin}>
                             <div className="mb-6">
@@ -142,7 +142,7 @@ const Login = () => {
                             <Link to='/register' className='text-sm font-medium'>Don&rsquo;t have an account? <span className='text-violet-500 hover:underline hover:cursor-pointer'>Register</span></Link>
                         </p>
                     </div>
-                    <div className='w-3/5 mx-auto'>
+                    <div className='w-full px-10 md:px-0 md:w-3/5 mx-auto'>
                         <div className='flex justify-center items-center gap-5 my-4'>
                             <span className='h-[1px] w-[200px] bg-gray-500'></span>
                             <span>OR</span>
