@@ -29,7 +29,7 @@ const ChefRecipes = () => {
                         <img className='hover:scale-125 hover:cursor-text hover:translate-y-10 duration-500 ease-in-out transition-all w-full rounded-lg' src={chef_fullPicture} alt="" />
 
                     </div>
-                    <span className='text-gray-900 bg-gradient-to-r from-[#FFC444] to-[#FAAA49] font-bold rounded-lg text-base md:text-lg absolute left-0 -bottom-6 md:-right-5 md:-bottom-5 p-3 md:p-5 shadow-xl'>{experience}+ Years of Experience</span>
+                    <span className='text-gray-900 bg-gradient-to-r from-[#FFC444] to-[#FAAA49] font-bold rounded-lg text-base md:text-lg absolute right-0 -bottom-6 md:-right-5 md:-bottom-5 p-3 md:p-5 shadow-xl'>{experience}+ Years of Experience</span>
                 </div>
                 <div className='w-full md:w-1/2'>
                     <div className='space-y-3 mb-3'>

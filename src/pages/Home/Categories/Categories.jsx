@@ -14,22 +14,22 @@ const Categories = () => {
             
             {/* for large device  */}
             <div className='flex flex-col justify-center max-w-screen-xl -mt-20 mx-auto px-10 md:grid md:grid-cols-2 lg:grid-cols-4'>
-                <div className='relative overflow-hidden mx-auto w-[270px] h-[270px] rounded-full border-[12px] border-white'>
+                <div className='cursor-pointer relative overflow-hidden mx-auto w-[270px] h-[270px] rounded-full border-[12px] border-white'>
                     <div className="category first hover:scale-125 transition-all duration-300">
                     </div>
                     <p className="category-title text-4xl mb-10">Pizza</p>
                 </div>
-                <div className='relative overflow-hidden mx-auto w-[270px] h-[270px] rounded-full border-[12px] border-white'>
+                <div className='cursor-pointer relative overflow-hidden mx-auto w-[270px] h-[270px] rounded-full border-[12px] border-white'>
                     <div className="category second hover:scale-125 transition-all duration-300">
                     </div>
                     <p className="category-title text-4xl">Risotto</p>
                 </div>
-                <div className='relative overflow-hidden mx-auto w-[270px] h-[270px] rounded-full border-[12px] border-white'>
+                <div className='cursor-pointer relative overflow-hidden mx-auto w-[270px] h-[270px] rounded-full border-[12px] border-white'>
                     <div className="category third hover:scale-125 transition-all duration-300">
                     </div>
                     <p className="category-title text-4xl">Pasta</p>
                 </div>
-                <div className='relative overflow-hidden mx-auto w-[270px] h-[270px] rounded-full border-[12px] border-white'>
+                <div className='cursor-pointer relative overflow-hidden mx-auto w-[270px] h-[270px] rounded-full border-[12px] border-white'>
                     <div className="category forth hover:scale-125 transition-all duration-300">
                     </div>
                     <p className="category-title text-4xl">Antipasti</p>
