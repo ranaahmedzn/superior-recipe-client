@@ -17,11 +17,11 @@ const Footer = () => {
 
     return (
         <div>
-            <div className='w-full bg-gray-800 px-4'>
-                <div className='max-w-screen-xl mx-auto py-10 lg:py-16 grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-5'>
+            <div className='w-full bg-gray-800'>
+                <div className='max-w-screen-xl mx-auto px-5 py-10 lg:py-16 grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-5'>
                     <div className='lg:col-span-2 space-y-5 lg:mr-10'>
                         <Link className='font-bold text-3xl text-white' to="/">Subscribe</Link>
-                        <p className='text-base text-gray-300'>Subscribe to our delicious newsletter and stay up-to-date with the latest Italian food recipes, cooking tips, and culinary news!</p>
+                        <p className='text-base text-gray-300'>Subscribe to our delicious newsletter and stay up-to-date with the latest Italian food recipes, cooking tips, and news!</p>
 
                         <form onSubmit={handleSubscribe} className="flex items-center gap-2">
                             <label htmlFor="subscribe" className="sr-only">Search</label>
@@ -67,7 +67,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                <div className='max-w-screen-xl mx-auto py-6 flex gap-4 flex-col-reverse md:flex-row justify-between md:items-center text-gray-400'>
+                <div className='max-w-screen-xl mx-auto px-5 py-6 flex gap-4 flex-col-reverse md:flex-row justify-between md:items-center text-gray-400'>
                     <p>&copy;2023 Superior Recipe | All Rights Reserved</p>
                     <div className='flex gap-3'>
                         <span className='social-btn'><FaFacebookSquare /></span>
